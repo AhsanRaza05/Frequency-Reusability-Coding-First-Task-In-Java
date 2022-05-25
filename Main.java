@@ -9,15 +9,30 @@ public class Main {
 	 System.out.println("Please Enter the value of N [For Multiple Seperate by , (comma)]:");
      String x = new Scanner(System.in).nextLine();
 	 
-	 // Remove the Leading and ending of commas
-	 //x = x.(",","");
+	 
+	 System.out.println("%"+x+"%");
+	 
+	 // Removing all white spaces
+	 x = x.replace(" ","");
+	 
+	 // Removing all Tabs
+	 x = x.replace("\t","");
+	 
+	 // Removing the Commas at beginning
+	 x = x.replaceAll("^,+(?!$)","");
+	 
+	 // Removing the Commas at Ending
+	 x = x.replaceAll(",$","");
+	 
+	 
+	 System.out.println("%"+x+"%");
 	 
 	 String input[] = x.split(",");
-     
+     System.out.println("N: "+Arrays.toString(input));
      //System.out.println(Arrays.toString(input));
      
-     // Trim the values of String
-     Arrays.parallelSetAll(input, (i) -> input[i].trim());
+     //Trim the values of String
+     //Arrays.parallelSetAll(input, (i) -> input[i].trim());
      ///Arrays.stream(array).map(String::trim).toArray(unused -> array);
      
 	 // Remove the Leading and ending of commas
