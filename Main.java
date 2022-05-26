@@ -10,7 +10,7 @@ public class Main {
      String x = new Scanner(System.in).nextLine();
 	 
 	 
-	 System.out.println("%"+x+"%");
+	 ////System.out.println("%"+x+"%");
 	 
 	 // Removing all white spaces
 	 x = x.replace(" ","");
@@ -25,10 +25,10 @@ public class Main {
 	 x = x.replaceAll(",$","");
 	 
 	 
-	 System.out.println("%"+x+"%");
+	 ////System.out.println("%"+x+"%");
 	 
 	 String input[] = x.split(",");
-     System.out.println("N: "+Arrays.toString(input));
+     ////System.out.println("N: "+Arrays.toString(input));
      //System.out.println(Arrays.toString(input));
      
      //Trim the values of String
@@ -44,7 +44,7 @@ public class Main {
      int N[] = Arrays.stream(input).mapToInt(Integer::parseInt).toArray();
      //N = Stream.of(input).mapToInt(Integer::parseInt).toArray();
                   
-      System.out.println("N: "+Arrays.toString(N));
+      ////System.out.println("N: "+Arrays.toString(N));
 
      l1:for(int a = 0; a < N.length ;a++){
 
@@ -58,9 +58,9 @@ public class Main {
          
          else{
              
-             l2:for(int i = 1; i <= (int) Math.sqrt(N[a]); i++){
+             l2:for(int i = 1; i <= sqrt; i++){
 
-             l3:for(int j = 1; j < i; j++){
+             l3:for(int j = 1; j <= (int) Math.sqrt(sqrt); j++){
 
                 //System.out.println("\t"+i+" "+j);
                 if (i * i + i * j + j * j == N[a]){
